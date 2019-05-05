@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PipeMovement : MonoBehaviour {
 
+	public float speed;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -11,6 +13,6 @@ public class PipeMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		transform.position += Vector3.left * speed * Time.deltaTime;
 	}
 }
