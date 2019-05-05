@@ -13,6 +13,7 @@ public class FlyLittleBird : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
+		Screen.SetResolution(640, 1136, false); // iPhone 5 landscape, windowed
 	}
 	
 	// Update is called once per frame

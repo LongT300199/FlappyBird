@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
 
 	private void Start() {
 		Time.timeScale = 1;
+		Screen.SetResolution(640, 1136, false); // iPhone 5 landscape, windowed
 	}
 
 	public void GameOver() {
@@ -17,7 +18,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void Replay() {
-		SceneManager.LoadScene(0);
+		SceneManager.LoadScene(1);
 	}
 
 }
