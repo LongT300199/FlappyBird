@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class FlyLittleBird : MonoBehaviour {
 
+	public GameManager gameManager;
 	public float velocity = 1;
 	public Rigidbody2D rb;
 	private bool tapped = false;
@@ -25,5 +26,9 @@ public class FlyLittleBird : MonoBehaviour {
 		if (tapped == true) {
 			rb.velocity = Vector2.up * velocity;
 		}
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision) {
+		gameManager.GameOver();
 	}
 }
